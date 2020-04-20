@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Plume</title>
+	<meta charset="UTF-8">
+	<!-- styles -->
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link href="https://fonts.googleapis.com/css2?family=Inter&family=Poppins:wght@600&family=Raleway:wght@600&display=swap" rel="stylesheet">
+	<!-- javascript -->
+	<script src="script.js"></script>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+</head>
+
+<body onload="randomizeDesc()">
+	<div class="container">
+		<div class="navbar">
+				<a href="index.html" ><div class="title" style="float:left"><img style="display:inline; margin-right:5px;margin-left: 0" src="assets/PlumeLogo1x.png"/>Plume</div></a>
+				<div class="text" style="float:right">
+					<a href="doctor.html" style="color:white;">I'm a Doctor</a>
+				</div>
+				<div class="text underlined" style="float:right; margin-right: 5vw;">
+					<a href="#" style="color:white;">I'm a Caregiver</a>
+				</div>
+				
+		</div>
+		<div class="banner">
+			
+			<div class = "content" style="margin-top: 20vh">
+				<div style="margin: 2vw">
+					<h1 class ="title" style = "display: inline;"><img style="display:inline; margin-right:7px;margin-left: 0" src="assets/PlumeLogo1.5x.png"/>Plume</h1> 
+					<h2 style = "display: inline; margin-left: 1vw; color: rgba(255,255,255,0.7)"> for Caregivers</h2>
+				</div>
+				<h3 class="subtitle">Assistive System for People with Parkinson’s Disease</h3>
+				<a class="video-button" style = "margin-top: 10vh" href="#">Watch our video ></a>
+			</div>
+			<h4 class = "description">
+				Plume is a system that strives to reduce the weight of Parkinson’s disease on the patients’ lives through automated data collection and assistive functions.
+			</h4>
+		</div>
+		<div class="subcontainer">
+			<div>
+				<h2 class="subtitle2">
+					How does Plume work for Caregivers?
+				</h2>
+				<h4 class= "subtitle description">
+					Whe a Parkinson's patient uses Plume, caregivers can view 5 key data points,
+				</h4>
+				<div class = "overview-container">
+					<div class="component">
+						<div>
+							icon
+						</div>
+						<h4>
+						Wearable Technology
+						<h4>
+						<p>
+							Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, 
+						</p>
+					</div>
+					<div class="component">
+						<div>
+							icon
+						</div>
+						<h4>
+						Virtual Coach
+						<h4>
+						<p>
+							Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, 
+						</p>
+					</div>
+					<div class="component">
+						<div>
+							icon
+						</div>
+						<h4>
+							Dashboards
+						<h4>
+						<p>
+							Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, 
+						</p>
+					</div>
+					<div class="component">
+						<div>
+							icon
+						</div>
+						<h4>
+							Remediation
+						<h4>
+						<p>
+							Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, 
+						</p>
+					</div>
+					<div class="component">
+						<div>
+							icon
+						</div>
+						<h4>
+							Memory
+						<h4>
+						<p>
+							Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, 
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class = "component-container">
+				<div class ="component">
+					<h2>
+						Dashboards for Caregivers
+					</h2>
+					<p>
+						Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle. By the same illusion which lifts the horizon of the sea to the level of the spectator on a hillside, the sable cloud beneath was dished out, 
+						Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle. By the same illusion which lifts the horizon of the sea to the level of the spectator on a hillside, the sable cloud beneath was dished out,
+					</p>
+					<div>
+						video
+					</div>
+					
+					<h3 class="collapsible">How do I get started? 
+						<i style="font-size: 30px; display: inline-flex;;vertical-align: middle;" class="material-icons">expand_more</i>
+					</h3> 
+
+					<div class="content">
+						  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer">
+			<p>Rapid Prototyping of Computer Systems | Spring 2020 | Carnegie Mellon University</p>
+		</div>
+	</div>
+
+	<!-- JS for collapsible components -->
+	<script>
+	var coll = document.getElementsByClassName("collapsible");
+	var i;
+
+	for (i = 0; i < coll.length; i++) {
+	  coll[i].addEventListener("click", function() {
+	    this.classList.toggle("active");
+	    var content = this.nextElementSibling;
+	    if (content.style.maxHeight){
+	      content.style.maxHeight = null;
+	    } else {
+	      content.style.maxHeight = content.scrollHeight + "px";
+	    } 
+	  });
+	}
+	</script>
+	
+</body>
+</html>

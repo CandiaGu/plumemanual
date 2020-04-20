@@ -56,6 +56,11 @@ img{
 	font-family: 'Poppins', sans-serif;
 }
 
+.navbar .underlined{
+	border-bottom: 2px solid white;
+}
+
+
 .title{
 	font-family: 'Raleway', sans-serif;
 	color: white;
