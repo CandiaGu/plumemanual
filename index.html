@@ -16,7 +16,7 @@
 <body onload="randomizeDesc()">
 	<div class="container">
 		<div class="navbar">
-				<div class="title" style="float:left;"><img style="display:inline; margin-right:5px;margin-left: 0" src="assets/PlumeLogo1x.png"/>Plume</div>
+				<a href="index.html" ><div class="title" style="float:left">Plume<img style="display:inline; margin-left:5px;" src="assets/PlumeLogo1x.png"/></div></a>
 				<div class="text" style="float:right">
 					<a href="doctor.html" style="color:white;">I'm a Doctor</a>
 				</div>
@@ -28,7 +28,7 @@
 		<div class="banner">
 			
 			<div class = "content" style="margin-top: 27vh">
-				<h1 class="title" ><img style="display:inline; margin-right:7px;margin-left: 0" src="assets/PlumeLogo1.5x.png"/>Plume</h1>
+				<h1 class="title" >Plume<img style="display:inline; margin-right:0;margin-left: 7px" src="assets/PlumeLogo1.5x.png"/></h1>
 				<h3 class="subtitle">Assistive System for People with Parkinson’s Disease</h3>
 				<a class="video-button" style = "margin-top: 10vh" href="#">Watch our video ></a>
 			</div>
@@ -46,58 +46,63 @@
 				</h4>
 				<div class = "overview-container">
 					<div class="component">
-						<div>
-							icon
+						<div class = "icon-container">
+							<i style="font-size: 30px; margin:10px;display: inline-flex;vertical-align: middle; color:#E8EDF2;" class="material-icons">watch
+							</i>
 						</div>
 						<h4>
 						Wearable Technology
 						<h4>
 						<p>
-							Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, 
+							Wearable sensors allow for regular daily monitoring in a comfortable and comprehensive way. 
 						</p>
 					</div>
 					<div class="component">
-						<div>
-							icon
+						<div class = "icon-container">
+							<i style="font-size: 30px; margin:10px;display: inline-flex;vertical-align: middle; color:#E8EDF2;" class="material-icons">record_voice_over
+							</i>
 						</div>
 						<h4>
 						Virtual Coach
 						<h4>
 						<p>
-							Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, 
+							Smart voice-based virtual coach that helps with daily medication reminders and regular long form reflections.
 						</p>
 					</div>
 					<div class="component">
-						<div>
-							icon
+						<div class = "icon-container">
+							<i style="font-size: 30px; margin:10px;display: inline-flex;vertical-align: middle; color:#E8EDF2;" class="material-icons">dashboard
+							</i>
 						</div>
 						<h4>
 							Dashboards
 						<h4>
 						<p>
-							Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, 
+							Comprehensive set of dashboards for not only patients, but primary caregivers and doctors as well, to help monitor any Parkinson’s symptoms.
 						</p>
 					</div>
 					<div class="component">
-						<div>
-							icon
+						<div class = "icon-container">
+							<i style="font-size: 30px; margin:10px;display: inline-flex;vertical-align: middle; color:#E8EDF2;" class="material-icons">sports_esports
+							</i>
 						</div>
 						<h4>
-							Remediation
+							VR Remediation
 						<h4>
 						<p>
-							Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, 
+							Engaging and fun virtual reality games to ease tremors and improve balance.
 						</p>
 					</div>
 					<div class="component">
-						<div>
-							icon
+						<div class = "icon-container">
+							<i style="font-size: 30px; margin:10px;display: inline-flex;vertical-align: middle; color:#E8EDF2;" class="material-icons">emoji_objects
+							</i>
 						</div>
 						<h4>
 							Memory
 						<h4>
 						<p>
-							Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, 
+							Memory games to improve and strengthen memory retention
 						</p>
 					</div>
 				</div>
@@ -107,18 +112,23 @@
 					<h2>
 						Wearable technology
 					</h2>
-					<p>
-						Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle. By the same illusion which lifts the horizon of the sea to the level of the spectator on a hillside, the sable cloud beneath was dished out, 
-						Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle. By the same illusion which lifts the horizon of the sea to the level of the spectator on a hillside, the sable cloud beneath was dished out,
+					<p class="columns">
+						When it comes to accurately tracking physiological symptoms Plume’s wearable sensors allow for regular daily monitoring in a comfortable and comprehensive way. A sensor worn at the hip measures step count, length, instances of freezing as well as falls; a second sensor worn on the wrist measures upper body tremors; a third sensor worn on the wrist measures blood pressure when stationary.
 					</p>
-					<div>
-						video
-					</div>
 					<h3 class="collapsible">How do I get started? 
 						<i style="font-size: 30px; display: inline-flex;;vertical-align: middle;" class="material-icons">expand_more</i>
 					</h3> 
 					<div class="content">
-						  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+						  <h4>Blood Pressure Sensor</h5>
+						  <div class="grid">
+						  		<img src = "assets/sensor.jpeg"/>
+						  		<div>
+							  	<p>1. The blood pressure sensor will be a wrist attachment that can be strapped on to either wrist like a watch.</p>
+							  	<p>2. Once the sensor is on the wrist securely, start the sensor via the START/STOP switch found on the front of the sensor to begin sensing.</p>
+							  	<p>3. The sensor will need to be worn as directed by your physician. For example, your doctor may recommend you record your blood pressure only in the morning immediately after you wake up.</p>
+
+							  	</div>
+						  </div>
 					</div>
 				</div>
 				<div class ="component">
