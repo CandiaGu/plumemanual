@@ -7,33 +7,37 @@
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<link href="https://fonts.googleapis.com/css2?family=Inter&family=Poppins:wght@600&family=Raleway:wght@600&display=swap" rel="stylesheet">
 	<!-- javascript -->
-	<script src="script.js"></script>
+	
 	<script src="https://player.vimeo.com/api/player.js"></script>
 	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
 
 </head>
 
-<body onload="randomizeDesc()">
+<body>
 	<div class="container">
 		<div class="navbar" id="navbar">
-				<a href="index.html" ><div class="title" style="float:left">Plume<img style="display:inline; margin-left:5px;" src="assets/PlumeLogo1x.png"/></div></a>
+				<a href="index.html" ><div class="title navbar-text" style="float:left">Plume<img id = "navbar-logo" style="display:inline; margin-left:5px;" src="assets/PlumeLogo1x.png"/></div></a>
 				<div class="text" style="float:right" >
-					<a href="doctor.html" style="color:white;">I'm a Doctor</a>
+					<a href="doctor.html" class="navbar-text">I'm a Doctor</a>
 				</div>
 				<div class="text" style="float:right; margin-right: 5vw;">
-					<a href="caregiver.html" style="margin-left: 5vw; color:white;">I'm a Caregiver</a>
+					<a href="caregiver.html" class="navbar-text" style="margin-left: 5vw;">I'm a Caregiver</a>
 				</div>
 				
 		</div>
-		<div class="vimeo-wrapper" id="vimeo-wrapper">
-				<iframe id="video" src="https://player.vimeo.com/video/412929373?api=1" allow="autoplay" frameborder="0" ></iframe>
+		<a class="close-video" id="close-video">
+				<i style="font-size: 50px; margin:10px;display: inline-flex;vertical-align: middle; color:#7277DF;" class="material-icons">cancel
+				</i>
+		</a>
+		<div class="vimeo-wrapper" id="vimeo-wrapper" onmousemove="videoMouseMove(event)">	
+				<iframe style="pointer-events: none;"  id="video" src="https://player.vimeo.com/video/412929373?api=1" allow="autoplay" frameborder="0"></iframe>
 		</div>
 		<div class="banner" id="banner">
 			<div class = "content" style="margin-top: 27vh">
 				<h1 class="title" >Plume<img style="display:inline; margin-right:0;margin-left: 7px" src="assets/PlumeLogo1.5x.png"/></h1>
 				<h3 class="subtitle">Assistive System for People with Parkinson’s Disease</h3>
-				<a id="video-button" class="video-button" style = "margin-top: 10vh" href="#">Watch our video ></a>
+				<a id="video-button" class="video-button" style = "margin-top: 10vh; z-index: 3;" href="#">Watch our video ></a>
 			</div>
 			
 		</div>
@@ -121,19 +125,96 @@
 					<p class="columns">
 						When it comes to accurately tracking physiological symptoms Plume’s wearable sensors allow for regular daily monitoring in a comfortable and comprehensive way. A sensor worn at the hip measures step count, length, instances of freezing as well as falls; a second sensor worn on the wrist measures upper body tremors; a third sensor worn on the wrist measures blood pressure when stationary.
 					</p>
+					<img src = "assets/1wearabletech/2belt.png"/>
 					<h3 class="collapsible">How do I get started? 
 						<i style="font-size: 30px; display: inline-flex;;vertical-align: middle;" class="material-icons">expand_more</i>
 					</h3> 
 					<div class="content">
-						  <h4>Blood Pressure Sensor</h5>
-						  <div class="grid">
-						  		<img src = "assets/sensor.jpeg"/>
-						  		<div>
-							  	<p>1. The blood pressure sensor will be a wrist attachment that can be strapped on to either wrist like a watch.</p>
-							  	<p>2. Once the sensor is on the wrist securely, start the sensor via the START/STOP switch found on the front of the sensor to begin sensing.</p>
-							  	<p>3. The sensor will need to be worn as directed by your physician. For example, your doctor may recommend you record your blood pressure only in the morning immediately after you wake up.</p>
+						  <h4>Using the Gait Sensor</h4>
+						  <div   class="grid">
+						  	<div style="grid-column: 1 / span 6;">
+						  		<h4>Step 1</h4>
+							  	<p>When starting your day, attach the gait sensor to any belt of your choice.
+								</p>
 
-							  	</div>
+							</div>
+						  	<img  style="grid-column: 7 / span 6;" src = "assets/1wearabletech/1belt.png"/>
+						  	
+						  	<div style="grid-column: 4 / span 6;">
+						  		<h4>Step 2</h4>
+							  	<p>Once the sensor is securely attached to your belt, turn ON the sensor via a small ON/OFF switch found on the side of the sensor.
+								</p>
+
+							</div>
+
+						
+						  	<img  style="grid-column: 1 / span 6;" src = "assets/1wearabletech/2belt.png"/>
+						  	<div style="grid-column: 7 / span 6;">
+						  		<h4>Step 3</h4>
+							  	<p>Keep the sensor on your body and turned ON throughout the day until you are ready to sleep for the evening. 
+							  	</p>
+							  	<p>
+								Please consult your doctor on how frequently you should wear the belt.
+								</p>
+
+							</div>
+
+						  </div>
+						  <h4 >Using the Upper Body Sensor</h4>
+
+						  <div   class="grid">
+							  <div style="grid-column: 1 / span 6;">
+							  		<h4>Step 1</h4>
+								  	<p>When starting your day, put on your upper body sensor onto either wrist, similar to putting on a watch.
+									</p>
+
+								</div>
+							  	<img  style="grid-column: 7 / span 6;" src = "assets/1wearabletech/3wrist.jpg"/>
+							  	<div style="grid-column: 4 / span 6;">
+							  		<h4>Step 2</h4>
+								  	<p>Once the sensor is on the wrist securely, turn ON the sensor via a small ON/OFF switch found on the side of the sensor.
+									</p>
+
+								</div>
+								<div style="grid-column: 4 / span 6;">
+							  		<h4>Step 3</h4>
+								  	<p>Keep the sensor on your body and turned ON throughout the day until you are ready to sleep for the evening. 
+									</p>
+									<p>
+									Please consult your doctor on how frequently you should wear the sensor.
+									</p>
+
+								</div>
+						  </div>
+						  <h4>Using the Blood Pressure Sensor</h4>
+
+						   <div   class="grid">
+							  	<div style="grid-column: 1 / span 6;">
+							  		<h4>Step 1</h4>
+								  	<p>Strap on your blood presure sensor on your wrist.
+									</p>
+
+								</div>
+							  	<img  style="grid-column: 7 / span 6;" src = "assets/1wearabletech/5bp.jpg"/>
+
+							  	<img  style="grid-column: 1 / span 6;" src = "assets/1wearabletech/4bp.jpg"/>
+							  	<div style="grid-column: 7 / span 6;">
+							  		<h4>Step 2</h4>
+								  	<p>Once the sensor is on the wrist securely, start the sensor via the START/STOP switch found on the front of the sensor to begin sensing.
+									</p>
+
+								</div>
+							  	
+
+							  	<div style="grid-column: 4 / span 6; margin-bottom: 50vh: ">
+							  		<h4>Please Note</h4>
+								  	<p>The sensor will need to be worn as directed by your physician. For example, your doctor may recommend you record your blood pressure only in the morning immediately after you wake up.
+									</p>
+
+								</div>
+								<div style="grid-column: 4 / span 6; margin-bottom: 50vh: ">
+
+								</div>
 						  </div>
 					</div>
 				</div>
@@ -144,11 +225,161 @@
 					<p class="columns">
 						Research has shown that the cognitive and emotional effects of Parkinson’s Disease can be equally as difficult to manage as physical ones but often with less medical support. Plume’s system includes a smart voice-based virtual coach that helps with daily medication reminders and regular long form reflections. Not only will the long form reflections serve as a way to measure mental and emotional health for personal review, if the patient chooses to do so they can opt to show their progress with doctors.
 					</p>
+					<video width="100%"controls>
+					  <source src="assets/2virtualcoach/14main.mp4" type="video/mp4">
+					Your browser does not support the video tag.
+					</video>
 					<h3 class="collapsible">How do I get started? 
 						<i style="font-size: 30px; display: inline-flex;;vertical-align: middle;" class="material-icons">expand_more</i>
 					</h3> 
 					<div class="content">
-						  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+						  <h4>Setting up your technologies</h4>
+						  <h4>Amazon Echo</h4>
+						  <div   class="grid">
+						  	<div style="grid-column: 1 / span 6;">
+						  		<h4>Step 1</h4>
+							  	<p>Set up your Amazon Echo by following the instructions in the in-box manual. Make sure to place it in an area of your house that you are frequently in.
+								</p>
+							</div>
+						  	<img  style="grid-column: 7 / span 6;" src = "assets/2virtualcoach/1amzecho.jpg"/>
+						  	
+						  	<img  style="grid-column: 1 / span 4;" src = "assets/2virtualcoach/2alexaskillmenu.png"/>
+						  	<div style="grid-column: 7 / span 6;">
+						  		<h4>Step 2</h4>
+							  	<p>Launch the Amazon Alexa app on your phone. Click on the top left icon to open the menu. Once the side bar is open, tap on “Skills & Games.” 
+							  	</p>
+							</div>
+
+						  	<div style="grid-column: 4 / span 6;">
+						  		<h4>Step 3</h4>
+							  	<p>Under Skills & Games, click on the top right icon and search “Plume.” Select Plume Assistant and click “ENABLE TO USE.”
+								</p>
+								<p>
+								Note: The skill is not on the market yet, as this was designed for prototyping purposes only. 
+								</p>
+
+							</div>
+
+						  </div>
+
+						  <h4>Tile Tracker</h4>
+						  <div   class="grid">
+						  	<div style="grid-column: 4 / span 6;">
+						  		<h4>Step 1</h4>
+							  	<p>Follow the in-box instructions for Tile and the Tile app. You will be able to label each Tile tracker to the belonging of your choice.
+								</p>
+							</div>
+						  	<img  style="grid-column: 1 / span 3;" src = "assets/2virtualcoach/3tile.png"/>
+						  	<img  style="grid-column: 4 / span 3;" src = "assets/2virtualcoach/4tile.png"/>
+						  	<img  style="grid-column: 7 / span 3;" src = "assets/2virtualcoach/5tile.png"/>
+						  	<img  style="grid-column: 10 / span 3;" src = "assets/2virtualcoach/6tile.png"/>
+						  	
+						  	<img  style="grid-column: 1 / span 4;" src = "assets/2virtualcoach/2alexaskillmenu.png"/>
+						  	<div style="grid-column: 7 / span 6;">
+						  		<h4>Step 2</h4>
+							  	<p>Launch the Amazon Alexa app on your phone. Click on the top left icon to open the menu. Once the side bar is open, tap on “Skills & Games.” 
+							  	</p>
+							</div>
+
+						  	<div style="grid-column: 4 / span 6;">
+						  		<h4>Step 3</h4>
+							  	<p>Once inside the “Skills & Games” page, type in “Tile” at the top search bar. Select the “Tile” icon and click “ENABLE TO USE.”
+								</p>
+
+							</div>
+
+						  	</div>
+
+						  	
+						  	<div   class="grid">
+						  	<h4 style="grid-column: 1 / span 6; color: #7277DF">Bluetooth Beacon</h4>
+						  	<div style="color:#7277DF;grid-column: 8 / span 5">
+						  		<h5>Please Note</h5>
+						  		<p style="color:#7277DF">Due to material shortage brought by COVID-19, the Bluetooth beacon was used to prototype the object tracking feature in place of RFID tags and RFID sensors. </p>
+
+						  	</div>
+						  	<div style="grid-column: 1 / span 6;">
+						  		<h4>Step 1</h4>
+							  	<p>Follow the in-box instructions to set up your Bluetooth beacon. Make sure to attach the beacons to the same objects as the Tile trackers.
+							  	</p>
+							  	<p>
+								Ideally, these beacons would be replaced by RFID tags.
+								</p>
+							</div>
+						  	<img  style="grid-column: 7 / span 6;" src = "assets/2virtualcoach/9beacon.jpg"/>
+						  	
+
+						  	<div style="grid-column: 4 / span 6;">
+						  		<h4>Step 2</h4>
+							  	<p>Download the “Plume Door Sensor” app on your phone. Attach the phone near your front door for simulation purposes. 
+								</p>
+								<p>
+								Ideally, this app would be replaced by a RFID sensor. 
+								</p>
+
+							</div>
+
+						  </div>
+
+						  <h4>Creating Routines</h4>
+						  <div   class="grid">
+						  	<div style="grid-column: 1 / span 6;">
+						  		<h4>Step 1</h4>
+							  	<p>In your Amazon Alexa app, click on the top left icon to open the menu. Once the side bar is open, tap on “Routines”
+								</p>
+							</div>
+						  	<img  style="grid-column: 9 / span 4;" src = "assets/2virtualcoach/10alexaroutinemenu.png"/>
+						  	
+						  	<div style="grid-column: 4 / span 6;">
+						  		<h4>Step 2</h4>
+							  	<p>Once under Routines, tap on the “+” icon located on the top right corner of your screen. 
+							  	</p>
+							  	<p>
+								You will now create two skills: one called the “Medication check-in” and another called the “Emotions check-in.”
+							  	</p>
+							</div>
+
+							<img  style="grid-column: 1 / span 4;" src = "assets/2virtualcoach/11newroutine.png"/>
+						  	<div style="grid-column: 7 / span 6;">
+						  		<h4>Step 3</h4>
+							  	<p>For the medication check-in, enter your routine name as “Medication check-in.” 
+								</p>
+
+							</div>
+
+							<div style="grid-column: 1 / span 6;">
+							  	<p>Next, select “When this happens” and click “Schedule”
+							  	</p>
+							  	<p>
+								Schedule the medication check-in at the desired time and frequency under your doctor’s instructions.
+								</p>
+							</div>
+							<img  style="grid-column: 9 / span 4;" src = "assets/2virtualcoach/12schedule.png"/>
+
+							<img  style="grid-column: 1 / span 4;" src = "assets/2virtualcoach/12schedule.png"/>
+							<div style="grid-column: 7 / span 6;">
+							  	<p>Finally, select “Add action,” scroll to the bottom and select “Skills”
+							  	</p>
+							  	<p>
+								Tap on “Your Skills” and select “Plume Assistant” 
+								</p>
+
+							</div>
+							<div style="grid-column: 4 / span 6;">
+						  		<h4>Step 4</h4>
+							  	<p>Repeat the steps in Step 3 to create another routine called “Emotions check-in.” It is best if you schedule this check-in  in the evening of every day. 
+								</p>
+
+							</div>
+							<div style="grid-column: 4 / span 6; margin-bottom: 10vh">
+
+							</div>
+
+						  </div>
+
+
+
+
 					</div>
 				</div>
 				<div class ="component">
@@ -158,13 +389,73 @@
 					<p class="columns">
 						Due to Parkinson’s Disease chronic nature and unique symptom manifestation in each patient it’s important to allow doctors and caregivers visibility into symptom development overtime. Plume provides a comprehensive set of dashboards for not only patients, but primary caregivers and doctors as well.
 					</p>
+					<img src = "assets/3dashboardspatient/2home.png"/>
 					<h3 class="collapsible">How do I get started? 
 						<i style="font-size: 30px; display: inline-flex;;vertical-align: middle;" class="material-icons">expand_more</i>
 					</h3> 
 					<div class="content">
-						  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-					</div>
+						  <h4>Create an Account</h4>
+						  <div   class="grid">
+						  	<div style="grid-column: 4 / span 6;">
+						  		<h4>Step 1</h4>
+							  	<p>On the log in screen, at the bottom right of the white “Welcome to Plume” box, click “Create an Account”
+								</p>
+
+							</div>
+							<div style="grid-column: 4 / span 6;">
+						  		<h4>Step 2</h4>
+							  	<p>Fill in the necessary details to create your account.</p>
+							  	<p> 
+								Plume will ask for your first and last name, desired username, email address and desired password.
+								</p>
+								<p>
+								Choose to Register as “Patient” and click the “Register Account” button.
+								</p>
+							</div>
+						  	<img  style="grid-column: 2 / span 10;" src = "assets/3dashboardspatient/1create.png"/>
+						  	<div style="grid-column: 4 / span 6;">
+						  		<h4>Please Note</h4>
+							  	<p>We recommend that you write down your username and password on paper and store it somewhere safe and hidden, where you can find it later if you forget. 
+								</p>
+
+							</div>
+						  </div>
+
+						  <h4>Login</h4>
+						  <div   class="grid">
+						  	<div style="grid-column: 4 / span 6;">
+						  		<h4>Step 1</h4>
+							  	<p>In the “Enter Username…” field, type the username you chose when you created your account.
+								</p>
+
+							</div>
+							<div style="grid-column: 4 / span 6;">
+						  		<h4>Step 2</h4>
+							  	<p>In the “Password” field, type the password you chose when you created your account.
+								</p>
+							</div>
+						  	<div style="grid-column: 4 / span 6;">
+						  		<h4>Please Note</h4>
+							  	<p>If you don’t want to have to log in next time, select the checkbox next to “Remember Me”
+							  	</p>
+							  	<p>
+									If you have forgotten your password, click “Forgot Password?”
+								</p>
+
+							</div>
+
+							</div>
+
+							<h4>Home Page</h4>
+						  <div   class="grid">
+						  	<img  style="grid-column: 2 / span 10;" src = "assets/3dashboardspatient/2home.png"/>
+
+						  </div>
+
 				</div>
+
+
+
 				<div class ="component">
 					<h2>
 						Remediation
@@ -172,6 +463,10 @@
 					<p class="columns">
 						While medication and specialized operations are often employed for symptom alleviation, remediation activities such as light exercise are tightly coupled with the easement of tremors or balance concerns. Plume’s system includes a set of virtual reality games that makes consistent exercise engaging and fun each time.
 					</p>
+					<video width="100%"controls>
+					  <source src="assets/4remediation/6Game_2.mp4" type="video/mp4">
+					Your browser does not support the video tag.
+					</video>
 					<h3 class="collapsible">How do I get started? 
 						<i style="font-size: 30px; display: inline-flex;;vertical-align: middle;" class="material-icons">expand_more</i>
 					</h3> 
@@ -186,6 +481,7 @@
 					<p class="columns">
 						Plume takes into account those who experience memory issues as a result of Parkinson’s Disease by providing two games meant to assess cognitive ability. The word search game tests language recognition abilities, and the tile-matching game assesses the patient’s visual memory, episodic memory, and learning abilities.
 					</p>
+					<img src = "assets/5memory/4play.png"/>
 					<h3 class="collapsible">How do I get started? 
 						<i style="font-size: 30px; display: inline-flex;;vertical-align: middle;" class="material-icons">expand_more</i>
 					</h3> 
@@ -200,67 +496,6 @@
 		</div>
 	</div>
 
-	<!-- JS for collapsible components -->
-	<script>
-	var coll = document.getElementsByClassName("collapsible");
-	var i;
-
-	for (i = 0; i < coll.length; i++) {
-	  coll[i].addEventListener("click", function() {
-	    this.classList.toggle("active");
-	    var content = this.nextElementSibling;
-	    if (content.style.maxHeight){
-	      content.style.maxHeight = null;
-	    } else {
-	      content.style.maxHeight = content.scrollHeight + "px";
-	    } 
-	  });
-	}
-
-	//Video functionalities
-	var videoButton = document.getElementById("video-button");
-	var video = document.getElementById("video");
-	var banner = document.getElementById("banner");
-
-	videoButton.addEventListener("click", function(){
-
-		video.style.visibility = "visible";
-		banner.classList.add("fade-out");
-
-		var desc = document.getElementById('banner-description');
-		desc.style.backgroundImage = "none";
-		var navbar = document.getElementById('navbar');
-		navbar.style.backgroundImage = "none";
-		navbar.style.color = "#7277DF";
-
-		var iframe = document.getElementById('video');
-		var player = new Vimeo.Player(iframe);
-		player.play().then(function() {
-    		// the video was played
-		}).catch(function(error) {
-		    switch (error.name) {
-		        case 'PasswordError':
-		            // the video is password-protected and the viewer needs to enter the
-		            // password first
-		            break;
-
-		        case 'PrivacyError':
-		            // the video is private
-		            break;
-
-		        default:
-		            // some other error occurred
-		            break;
-		    }
-		});
-	})
-
-
-
-
-
-
-	</script>
-	
+	<script src="script.js"></script>
 </body>
 </html>

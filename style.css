@@ -42,14 +42,17 @@ img{
 	padding: 2vw 5vw 2vw 5vw;
 	position: absolute;
 	width: 90vw;
-	z-index: 3;
+	z-index: 1001;
 	background-image: linear-gradient(var(--primary-color), rgba(0,0,0,0));
 }
 .navbar .title{
 	font-size: 30px;
-
-
 }
+
+.navbar-text{
+	color: white;
+}
+
 .navbar .text{
 	font-size: 16px;
 	text-align: right;
@@ -74,25 +77,42 @@ img{
 	color: white;
 }
 
+.vimeo-wrapper {
+	position: absolute;
+	z-index: 0;
+}
+
 .vimeo-wrapper iframe {
-   z-index: 0;
    width: 100vw;
    height: 56.25vw; /* Given a 16:9 aspect ratio, 9/16*100 = 56.25 */
    min-height: 100vh;
    min-width: 177.77vh; /* Given a 16:9 aspect ratio, 16/9*100 = 177.77 */
-   position: absolute;
-   top: 50%;
-   left: 50%;
-   transform: translate(-50%, -50%);
    visibility: hidden;
+}
+
+.close-video{
+	position: absolute;
+	top: 10vh;
+	margin-left: auto;
+	margin-right: auto;
+	left: 0;
+	right: 0;
+	text-align: center;
+	visibility: hidden;
+	z-index: 2000;
 }
 
 .fade-out {
   visibility: hidden;
   opacity: 0;
-  transition: visibility 0s linear 500ms, opacity 500ms;
+  transition: visibility 0s linear 500ms, opacity 1000ms;
 }
 
+.fade-in {
+  visibility: visible;
+  opacity: 1;
+  transition: visibility 0s linear 500ms, opacity 1000ms;
+}
 
 .subtitle2{
 	text-align: center;
@@ -129,7 +149,14 @@ img{
 	border-radius: 20px;
 	font-family: 'Poppins', sans-serif;
 	color: white;
+	transition: 0.3s;
 }
+
+.video-button:hover{
+	background-color: rgba(255,255,255,0.3);
+}
+
+
 
 .banner-description .description{
 	flex:2;
@@ -188,21 +215,33 @@ img{
 }
 
 .component-container .content {
-	padding: 0 18px;
 	max-height: 0;
 	overflow: hidden;
 	transition: max-height 0.2s ease-out;
-	background-color: var(--accent-color);
 }
 
 .component-container .content .grid{
 	display: grid;
-	grid-template-columns:  1fr 1fr;
+	grid-template-columns:  repeat(12, 1fr);;
 	margin-bottom: 5vh;
-	gap: 40px 40px;
+	gap: 80px 40px;
 }
 
-.component-container .content .grid img{
+.component-container .content .grid div{
+	align-self: center;
+}
+
+.component-container .content .grid h4{
+	color: black;
+	margin-top: 0;
+}
+
+.component-container h4{
+	margin-top: 10vh;
+	margin-bottom: 5vh;
+}
+
+.component-container img{
 	object-fit: cover;
   	max-width: 100%;
   	margin:0;
@@ -214,6 +253,8 @@ img{
 	height: 50px; 
 	border-radius: 25px;
 }
+
+
 
 .footer{
 	padding: 7vw 7vw 2vw 12vw;
