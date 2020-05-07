@@ -218,11 +218,12 @@ img{
 	max-height: 0;
 	overflow: hidden;
 	transition: max-height 0.2s ease-out;
+	background-color: var(--accent-color);
 }
 
 .component-container .content .grid{
 	display: grid;
-	grid-template-columns:  repeat(12, 1fr);;
+	grid-template-columns:  repeat(12, 1fr);
 	margin-bottom: 5vh;
 	gap: 80px 40px;
 }
@@ -255,6 +256,30 @@ img{
 }
 
 
+.alexa-container{
+	background-color: white;
+	grid-column: 2 / span 10;
+	display: grid;
+	grid-template-columns:  repeat(10, 1fr);
+	padding-top:5vh;
+	padding-bottom:5vh;
+}
+
+.alexa-container .alexatext{
+	grid-column: 3 / span 7;
+	color:var(--primary-color);
+	margin-bottom: 4vh;
+	font-family: 'Poppins', sans-serif;
+
+}
+
+.alexa-container .speakertext{
+	grid-column: 2 / span 8;
+	color:var(--primary-color);
+	margin-bottom: 4vh;
+	font-family: 'Poppins', sans-serif;
+
+}
 
 .footer{
 	padding: 7vw 7vw 2vw 12vw;
