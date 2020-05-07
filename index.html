@@ -8,6 +8,7 @@
 	<link href="https://fonts.googleapis.com/css2?family=Inter&family=Poppins:wght@600&family=Raleway:wght@600&display=swap" rel="stylesheet">
 	<!-- javascript -->
 	<script src="script.js"></script>
+	<script src="https://player.vimeo.com/api/player.js"></script>
 	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
 
@@ -15,9 +16,9 @@
 
 <body onload="randomizeDesc()">
 	<div class="container">
-		<div class="navbar">
+		<div class="navbar" id="navbar">
 				<a href="index.html" ><div class="title" style="float:left">Plume<img style="display:inline; margin-left:5px;" src="assets/PlumeLogo1x.png"/></div></a>
-				<div class="text" style="float:right">
+				<div class="text" style="float:right" >
 					<a href="doctor.html" style="color:white;">I'm a Doctor</a>
 				</div>
 				<div class="text" style="float:right; margin-right: 5vw;">
@@ -25,15 +26,20 @@
 				</div>
 				
 		</div>
-		<div class="banner">
-			
+		<div class="vimeo-wrapper" id="vimeo-wrapper">
+				<iframe id="video" src="https://player.vimeo.com/video/412929373?api=1" allow="autoplay" frameborder="0" ></iframe>
+		</div>
+		<div class="banner" id="banner">
 			<div class = "content" style="margin-top: 27vh">
 				<h1 class="title" >Plume<img style="display:inline; margin-right:0;margin-left: 7px" src="assets/PlumeLogo1.5x.png"/></h1>
 				<h3 class="subtitle">Assistive System for People with Parkinson’s Disease</h3>
-				<a class="video-button" style = "margin-top: 10vh" href="#">Watch our video ></a>
+				<a id="video-button" class="video-button" style = "margin-top: 10vh" href="#">Watch our video ></a>
 			</div>
-			<h4 class = "description">
-				Plume is a system that strives to reduce the weight of Parkinson’s disease on the patients’ lives through automated data collection and assistive functions.
+			
+		</div>
+		<div class="banner-description" id="banner-description">
+			<h4 class = "description" id="plume-description">
+					Plume is a system that strives to reduce the weight of Parkinson’s disease on the patients’ lives through automated data collection and assistive functions.
 			</h4>
 		</div>
 		<div class="subcontainer">
@@ -135,13 +141,9 @@
 					<h2>
 						Virtual Coach
 					</h2>
-					<p>
-						Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle. By the same illusion which lifts the horizon of the sea to the level of the spectator on a hillside, the sable cloud beneath was dished out, 
-						Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle. By the same illusion which lifts the horizon of the sea to the level of the spectator on a hillside, the sable cloud beneath was dished out,
+					<p class="columns">
+						Research has shown that the cognitive and emotional effects of Parkinson’s Disease can be equally as difficult to manage as physical ones but often with less medical support. Plume’s system includes a smart voice-based virtual coach that helps with daily medication reminders and regular long form reflections. Not only will the long form reflections serve as a way to measure mental and emotional health for personal review, if the patient chooses to do so they can opt to show their progress with doctors.
 					</p>
-					<div>
-						video
-					</div>
 					<h3 class="collapsible">How do I get started? 
 						<i style="font-size: 30px; display: inline-flex;;vertical-align: middle;" class="material-icons">expand_more</i>
 					</h3> 
@@ -153,13 +155,9 @@
 					<h2>
 						Dashboards
 					</h2>
-					<p>
-						Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle. By the same illusion which lifts the horizon of the sea to the level of the spectator on a hillside, the sable cloud beneath was dished out, 
-						Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle. By the same illusion which lifts the horizon of the sea to the level of the spectator on a hillside, the sable cloud beneath was dished out,
+					<p class="columns">
+						Due to Parkinson’s Disease chronic nature and unique symptom manifestation in each patient it’s important to allow doctors and caregivers visibility into symptom development overtime. Plume provides a comprehensive set of dashboards for not only patients, but primary caregivers and doctors as well.
 					</p>
-					<div>
-						video
-					</div>
 					<h3 class="collapsible">How do I get started? 
 						<i style="font-size: 30px; display: inline-flex;;vertical-align: middle;" class="material-icons">expand_more</i>
 					</h3> 
@@ -171,13 +169,9 @@
 					<h2>
 						Remediation
 					</h2>
-					<p>
-						Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle. By the same illusion which lifts the horizon of the sea to the level of the spectator on a hillside, the sable cloud beneath was dished out, 
-						Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle. By the same illusion which lifts the horizon of the sea to the level of the spectator on a hillside, the sable cloud beneath was dished out,
+					<p class="columns">
+						While medication and specialized operations are often employed for symptom alleviation, remediation activities such as light exercise are tightly coupled with the easement of tremors or balance concerns. Plume’s system includes a set of virtual reality games that makes consistent exercise engaging and fun each time.
 					</p>
-					<div>
-						video
-					</div>
 					<h3 class="collapsible">How do I get started? 
 						<i style="font-size: 30px; display: inline-flex;;vertical-align: middle;" class="material-icons">expand_more</i>
 					</h3> 
@@ -189,13 +183,9 @@
 					<h2>
 						Memory
 					</h2>
-					<p>
-						Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle. By the same illusion which lifts the horizon of the sea to the level of the spectator on a hillside, the sable cloud beneath was dished out, 
-						Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle. By the same illusion which lifts the horizon of the sea to the level of the spectator on a hillside, the sable cloud beneath was dished out,
+					<p class="columns">
+						Plume takes into account those who experience memory issues as a result of Parkinson’s Disease by providing two games meant to assess cognitive ability. The word search game tests language recognition abilities, and the tile-matching game assesses the patient’s visual memory, episodic memory, and learning abilities.
 					</p>
-					<div>
-						video
-					</div>
 					<h3 class="collapsible">How do I get started? 
 						<i style="font-size: 30px; display: inline-flex;;vertical-align: middle;" class="material-icons">expand_more</i>
 					</h3> 
@@ -226,6 +216,50 @@
 	    } 
 	  });
 	}
+
+	//Video functionalities
+	var videoButton = document.getElementById("video-button");
+	var video = document.getElementById("video");
+	var banner = document.getElementById("banner");
+
+	videoButton.addEventListener("click", function(){
+
+		video.style.visibility = "visible";
+		banner.classList.add("fade-out");
+
+		var desc = document.getElementById('banner-description');
+		desc.style.backgroundImage = "none";
+		var navbar = document.getElementById('navbar');
+		navbar.style.backgroundImage = "none";
+		navbar.style.color = "#7277DF";
+
+		var iframe = document.getElementById('video');
+		var player = new Vimeo.Player(iframe);
+		player.play().then(function() {
+    		// the video was played
+		}).catch(function(error) {
+		    switch (error.name) {
+		        case 'PasswordError':
+		            // the video is password-protected and the viewer needs to enter the
+		            // password first
+		            break;
+
+		        case 'PrivacyError':
+		            // the video is private
+		            break;
+
+		        default:
+		            // some other error occurred
+		            break;
+		    }
+		});
+	})
+
+
+
+
+
+
 	</script>
 	
 </body>
