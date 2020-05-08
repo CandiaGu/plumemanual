@@ -214,8 +214,8 @@ img{
 }
 
 .component .header {
-	margin-left: 15vw;
-	margin-right: 15vw;
+	padding-left: 15vw;
+	padding-right: 15vw;
 }
 
 .component .header h2{
@@ -302,6 +302,15 @@ img{
 .collapsible:hover{
 	opacity:0.5;
 	transition-duration: 0.5s;
+}
+
+.sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  background-color: var(--secondary-color);
+  padding-top: 2vh;
+  padding-bottom: 2vh;
 }
 
 .footer{

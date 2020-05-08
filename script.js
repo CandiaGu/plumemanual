@@ -109,9 +109,14 @@ for (i = 0; i < coll.length; i++) {
   coll[i].addEventListener("click", function() {
     this.classList.toggle("active");
     var content = this.nextElementSibling;
+    var anchor = this.previousElementSibling;
 
     expand = !expand;
-    this.children[0].innerHTML = expand ? "expand_less" : "expand_more" 
+    this.children[0].innerHTML = expand ? "expand_less" : "expand_more"
+
+    if(!expand){
+    	anchor.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    } 
 
     if (content.style.maxHeight){
       content.style.maxHeight = null;
