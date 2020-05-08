@@ -40,6 +40,9 @@ function videoStop(){
 
 	for (i = 0; i < navbarText.length; i++) {
 	  navbarText[i].style.color = "white";
+	  if(navbarText[i].style.borderBottomColor != "none"){
+	  	navbarText[i].style.borderBottomColor = "white";
+	  }
 	}
 
 	var iframe = document.getElementById('video');
@@ -61,14 +64,16 @@ function videoClick(){
 	var navbar = document.getElementById('navbar');
 	navbar.style.backgroundImage = "linear-gradient(rgba(255,255,255,1), rgba(0,0,0,0))";
 	document.getElementById('navbar-logo').src = "assets/PlumeLogoPurple1x.png";
+
 	var navbarText = document.getElementsByClassName('navbar-text');
-
 	var i;
-
 	videoPlay = true;
 
 	for (i = 0; i < navbarText.length; i++) {
 	  navbarText[i].style.color = "#7277DF";
+	  if(navbarText[i].style.borderBottomColor != "none"){
+	  	navbarText[i].style.borderBottomColor = "#7277DF";
+	  }
 	}
 
 

@@ -7,44 +7,54 @@
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<link href="https://fonts.googleapis.com/css2?family=Inter&family=Poppins:wght@600&family=Raleway:wght@600&display=swap" rel="stylesheet">
 	<!-- javascript -->
-	<script src="script.js"></script>
+	<script src="https://player.vimeo.com/api/player.js"></script>
 	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
 </head>
 
-<body onload="randomizeDesc()">
+<body>
 	<div class="container">
-		<div class="navbar">
-				<a href="index.html" ><div class="title" style="float:left">Plume<img style="display:inline; margin-left:5px;" src="assets/PlumeLogo1x.png"/></div></a>
-				<div class="text" style="float:right">
-					<a href="doctor.html" style="color:white;">I'm a Doctor</a>
-				</div>
-				<div class="text underlined" style="float:right; margin-right: 5vw;">
-					<a href="#" style="color:white;">I'm a Caregiver</a>
-				</div>
-				
+		<div class="navbar" id="navbar">
+			<a href="index.html" ><div class="title navbar-text" style="float:left">Plume<img id = "navbar-logo" style="display:inline; margin-left:5px;" src="assets/PlumeLogo1x.png"/></div></a>
+			<div class="text" style="float:right" >
+				<a href="doctor.html" class="navbar-text">I'm a Doctor</a>
+			</div>
+			<div class="text" style="float:right; margin-right: 5vw;">
+				<a href="caregiver.html" class="navbar-text underlined">I'm a Caregiver</a>
+			</div>
+
 		</div>
-		<div class="banner">
-			
+		<a class="close-video" id="close-video">
+			<i style="font-size: 50px; margin:10px;display: inline-flex;vertical-align: middle; color:#7277DF;" class="material-icons">cancel
+			</i>
+		</a>
+		<div class="vimeo-wrapper" id="vimeo-wrapper" onmousemove="videoMouseMove(event)">	
+			<iframe style="pointer-events: none;"  id="video" src="https://player.vimeo.com/video/412929373?api=1" allow="autoplay" frameborder="0"></iframe>
+		</div>
+		<div class="banner" id="banner">
 			<div class = "content" style="margin-top: 27vh">
 				<div style="margin: 2vw">
 					<h1 class ="title" style = "display: inline;">Plume</h1> 
 					<h2 style = "display: inline; margin-left: 1vw; color: rgba(255,255,255,0.7)"> for Caregivers</h2>
 				</div>
 				<h3 class="subtitle">Assistive System for People with Parkinson’s Disease</h3>
-				<a class="video-button" style = "margin-top: 10vh" href="#">Watch our video ></a>
+				<a id="video-button" class="video-button" style = "margin-top: 10vh; z-index: 3;" href="#">Watch our video ></a>
 			</div>
-			<h4 class = "description">
+			
+		</div>
+		<div class="banner-description" id="banner-description">
+			<h4 class = "description" id="plume-description">
 				Plume is a system that strives to reduce the weight of Parkinson’s disease on the patients’ lives through automated data collection and assistive functions.
 			</h4>
 		</div>
+
 		<div class="subcontainer">
 			<div>
 				<h2 class="subtitle2">
 					How does Plume work for Caregivers?
 				</h2>
 				<h4 class= "subtitle description">
-					Whe a Parkinson's patient uses Plume, caregivers can view 5 key data points,
+					When a Parkinson's patient uses Plume, caregivers can view 5 key data points,
 				</h4>
 				<div class = "overview-container">
 					<div class="component">
@@ -132,23 +142,7 @@
 		</div>
 	</div>
 
-	<!-- JS for collapsible components -->
-	<script>
-	var coll = document.getElementsByClassName("collapsible");
-	var i;
-
-	for (i = 0; i < coll.length; i++) {
-	  coll[i].addEventListener("click", function() {
-	    this.classList.toggle("active");
-	    var content = this.nextElementSibling;
-	    if (content.style.maxHeight){
-	      content.style.maxHeight = null;
-	    } else {
-	      content.style.maxHeight = content.scrollHeight + "px";
-	    } 
-	  });
-	}
-	</script>
+	<script src="script.js"></script>
 	
 </body>
 </html>
