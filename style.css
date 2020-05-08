@@ -164,6 +164,7 @@ img{
 	color: var(--primary-color);
 	opacity: 0.7;
 	width: 50vw;
+	text-align: center;
 }
 
 .container {
@@ -177,16 +178,16 @@ img{
 	min-height: 100%;
 }
 .subcontainer {
-	margin: 5vw;
+
 }
 
 .overview-container {
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
 	gap: 40px 40px;
-	margin: 6vw;
 	margin-top: 5vw;
 	margin-bottom: 20vw;
+	margin: 10vw;
 }
 
 .overview-container .component h4{
@@ -194,19 +195,17 @@ img{
 }
 
 .component-container {
-	margin: 7vw;
-	margin-left: 15vw;
-	margin-right: 15vw;
+
 }
 .component-container .component{
-	margin-bottom: 15vh;
+
 }
 .component-container .component h2{
 	padding-bottom: 2vh;
 	border-bottom: var(--accent-color) solid 0.5px;
 }
-.component-container .component h3{
-	color: var(--text-color);
+.component-container .component .content h3{
+	color: var(--primary-color);
 }
 
 .component-container .component .columns{
@@ -214,12 +213,25 @@ img{
 	column-gap: 3em;
 }
 
+.component .header {
+	margin-left: 15vw;
+	margin-right: 15vw;
+}
+
+.component .header h2{
+	margin-top: 15vw;
+}
+
+
 .component-container .content {
 	max-height: 0;
 	overflow: hidden;
 	transition: max-height 0.2s ease-out;
 	background-color: var(--accent-color);
+	padding-left: 15vw;
+	padding-right: 15vw;
 }
+
 
 .component-container .content .grid{
 	display: grid;
@@ -238,9 +250,15 @@ img{
 }
 
 .component-container h4{
+	color: black;
+}
+
+.component-container .content h4{
 	margin-top: 10vh;
 	margin-bottom: 5vh;
 }
+
+
 
 .component-container img{
 	object-fit: cover;
@@ -281,7 +299,13 @@ img{
 
 }
 
+.collapsible:hover{
+	opacity:0.5;
+	transition-duration: 0.5s;
+}
+
 .footer{
+	margin-top: 25vh;
 	padding: 7vw 7vw 2vw 12vw;
 	background-color: var(--accent-color);
 }
