@@ -13,7 +13,7 @@ function videoMouseMove(e){
 
 	if(videoPlay){
 		clearTimeout(timer);
-		timer=setTimeout(mouseStopped,300);
+		timer=setTimeout(mouseStopped,500);
 		var closeVid = document.getElementById('close-video');
 		closeVid.classList.add("fade-in");
 		closeVid.classList.remove("fade-out");
